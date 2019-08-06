@@ -5,7 +5,15 @@ import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 
+
+
 function App() {
+
+    function enterButton(e) {
+      e.preventDefault();
+      console.log('The button was clicked.');
+    }
+  
   return (
     <div className="App">
       <link
@@ -57,6 +65,8 @@ function App() {
                 required="required"
               />
             </InputGroup>
+            <br/>
+            <Button variant="primary" onClick={enterButton}>Enter</Button>
           </Card.Body>
         </Card>
       </header>
